@@ -7,6 +7,7 @@ const BlogEntries = ({ entries}) => {
       {entries.map((entry, index) => (
         <div key={index} className="blog-entry">
           <h3>{entry.title}</h3>
+          <h6>{entry.image}</h6>
           <p>{entry.content}</p>
           <h4>~{entry.name}</h4>
           </div>
