@@ -42,6 +42,13 @@ const EditBlogs = ({ entries, editBlogEntry}) => {
             >
               {entry.content}
             </p>
+            <p
+              contentEditable={editingIndex === index}
+              suppressContentEditableWarning={true}
+              onBlur={(e) => handleEditChange(e, 'name')}
+            >
+              ~{entry.name}
+            </p>
             {editingIndex === index ? (
               <button onClick={() => setEditingIndex(null)}>Done</button>
             ) : (
