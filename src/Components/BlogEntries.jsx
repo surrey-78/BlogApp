@@ -8,6 +8,7 @@ const BlogEntries = ({ entries}) => {
         <div key={index} className="blog-entry">
           <h3>{entry.title}</h3>
           <p>{entry.content}</p>
+          <h4>~{entry.name}</h4>
           </div>
       ))}
     </div>

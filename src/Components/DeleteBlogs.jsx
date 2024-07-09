@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './EditBlogs.css';
 
-const EditBlogs = ({ entries, editBlogEntry}) => {
+const DeleteBlogs = ({ entries, deleteBlogEntry }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredEntries = entries.filter(entry => 
@@ -23,7 +23,7 @@ const EditBlogs = ({ entries, editBlogEntry}) => {
           <div key={index} className="blog-entry">
             <h3>{entry.title}</h3>
             <p>{entry.content}</p>
-            <button onClick={() => editBlogEntry(index)}>Edit</button>
+            <button onClick={() => deleteBlogEntry(index)}>Delete</button>
           </div>
         ))}
       </div>
@@ -31,4 +31,4 @@ const EditBlogs = ({ entries, editBlogEntry}) => {
   );
 };
 
-export default EditBlogs;
+export default DeleteBlogs;

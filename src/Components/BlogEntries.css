@@ -64,3 +64,9 @@
     font-style: italic;
     color: black;
   }
+
+  h4{
+    color: black;
+    font-style: oblique;
+    font-weight: lighter;
+  }

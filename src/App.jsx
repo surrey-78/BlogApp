@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import BlogEntryForm from './Components/BlogEntryForm';
 import BlogEntries from './Components/BlogEntries';
 import EditBlogs from './Components/EditBlogs';
+import DeleteBlogs from './Components/DeleteBlogs';
 import './App.css';
 
 function App() {
@@ -36,7 +37,9 @@ function App() {
           <BlogEntryForm addBlogEntry={addBlogEntry} currentEntry={currentEntry} />
           <BlogEntries entries={entries} editBlogEntry={editBlogEntry} deleteBlogEntry={deleteBlogEntry} />
         </>} />
-        <Route path="/edit-blogs" element={<EditBlogs entries={entries} editBlogEntry={editBlogEntry} deleteBlogEntry={deleteBlogEntry} />} />
+        <Route path="/edit-blogs" element={<EditBlogs entries={entries} editBlogEntry={editBlogEntry}  />} />
+        <Route path="/delete-blogs" element={<DeleteBlogs entries={entries} deleteBlogEntry={deleteBlogEntry}  />} />
+      
       </Routes>
     </Router>
   );
