@@ -1,0 +1,18 @@
+.about-us {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about-us h1 {
+    margin-bottom: 20px;
+    font-weight: bolder;
+    color: #fff;
+  }
+  
+  .about-us p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #fff;
+    font-size: 20px;
+  }
+  

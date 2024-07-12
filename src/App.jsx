@@ -7,6 +7,7 @@ import BlogEntries from './Components/BlogEntries';
 import EditBlogs from './Components/EditBlogs';
 import DeleteBlogs from './Components/DeleteBlogs';
 import './App.css';
+import AboutUs from './Components/AboutUs';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         </>} />
         <Route path="/edit-blogs" element={<EditBlogs />} />
         <Route path="/delete-blogs" element={<DeleteBlogs />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
     </Router>
   );
