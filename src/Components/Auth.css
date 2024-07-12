@@ -1,113 +1,113 @@
-/* Dark Theme with Full Width Inputs and Centered Button */
+/* Dark Theme with Blue and White Combination and Matching Background */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #2c3e50; /* Dark blue background */
-    color: #ecf0f1; /* Light text color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../images/5488082.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  color: #ecf0f1; /* Light text color */
+}
+
+.auth-container {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center; /* Align content to the center */
+  animation: slide-up 0.5s ease, fadeIn 0.5s ease;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
-  .auth-container {
-    background-color: #34495e; /* Darker blue container background */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 40px;
-    width: 100%;
-    max-width: 400px;
-    text-align: center; /* Align content to the center */
-    animation: slide-up 0.5s ease, fadeIn 0.5s ease;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  @keyframes slide-up {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
-  
-  .auth-container h2 {
-    margin-bottom: 20px;
-    color: #ecf0f1; /* Light heading color */
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .auth-container form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .auth-container label {
-    margin-bottom: 10px;
-    text-align: left;
-    color: #bdc3c7; /* Light label color */
-    font-size: 14px;
-  }
-  
-  .auth-container input {
-    width: 92%;
-    padding: 12px;
-    margin-bottom: 10px;
-    background-color: #2c3e50; /* Dark input background */
-    color: #ecf0f1; /* Light text color */
-    border: 1px solid #34495e; /* Darker border color */
-    border-radius: 5px;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
-  }
-  
-  .auth-container input:focus {
-    outline: none;
-    border-color: #3498db; /* Highlight color on focus */
-  }
-  
-  .auth-container button {
-    width: 100%;
-    padding: 12px;
-    background-color: #3498db; /* Blue button background */
-    color: #ecf0f1; /* Light text color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .auth-container button:hover {
-    background-color: #2980b9; /* Darker shade on hover */
-  }
-  
-  .auth-container p {
-    margin-top: 20px;
-    color: #bdc3c7; /* Light paragraph text color */
-  }
-  
-  .auth-container p a {
-    color: #3498db; /* Blue link color */
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .auth-container p a:hover {
-    text-decoration: underline;
-  }
-  
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #ffffff; /* White heading color */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container label {
+  margin-bottom: 10px;
+  text-align: left;
+  color: #ffffff; /* White label color */
+  font-size: 14px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #ffffff; /* White input background */
+  color: #333; /* Dark text color */
+  border: 1px solid #3498db; /* Blue border color */
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.auth-container input:focus {
+  outline: none;
+  border-color: #2980b9; /* Darker blue highlight color on focus */
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2980b9; /* Darker blue button background */
+  color: #ffffff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.auth-container button:hover {
+  background-color: #3498db; /* Lighter blue shade on hover */
+}
+
+.auth-container p {
+  margin-top: 20px;
+  color: #bdc3c7; /* Light paragraph text color */
+}
+
+.auth-container p a {
+  color: #3498db; /* Blue link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-container p a:hover {
+  text-decoration: underline;
+}

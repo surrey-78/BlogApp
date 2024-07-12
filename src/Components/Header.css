@@ -1,7 +1,7 @@
 /* Modern Hover Effects for Header Buttons */
 
 .header {
-  background-color: #3498db; /* Blue header background */
+  background-image: url('../images/rm218-bb-07.jpg'); /* Blue header background */
   color: #ffffff; /* White text color */
   padding: 10px 0;
   display: flex;
@@ -13,6 +13,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  opacity: 50%;
 }
 
 .header-title {

@@ -1,40 +1,76 @@
-/* src/ContactUs.css */
+/* Contact Us Page Styles with Attractive and Responsive Design */
 
-.contact-us {
+.contact-container {
+  padding: 30px 20px;
+  background-color: #f5f5f5; /* Light background color */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  max-width: 800px; /* Adjust as needed */
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Dark text color */
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px; /* Limit form width if needed */
+  margin: 0 auto; /* Center form horizontally */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333; /* Dark text color */
+}
+
+.input-field,
+.textarea-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff; /* White background */
+  color: #333; /* Dark text color */
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+  border-color: #3498db; /* Focus border color */
+}
+
+.textarea-field {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #3498db; /* Blue background */
+  color: #ffffff; /* White text color */
+  padding: 14px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+  .contact-container {
     padding: 20px;
   }
-  
-  .contact-us h2 {
-    margin-bottom: 20px;
-  }
-  
-  .contact-us form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-us form label {
-    margin-bottom: 10px;
-  }
-  
-  .contact-us form input,
-  .contact-us form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .contact-us form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .contact-us form button:hover {
-    background-color: #555;
-  }
-  
+}

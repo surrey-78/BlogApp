@@ -1,6 +1,3 @@
-/* src/App.css */
-
-/* Fade-in animation for page content */
 .page {
   opacity: 0;
   transition: opacity 0.3s ease;
