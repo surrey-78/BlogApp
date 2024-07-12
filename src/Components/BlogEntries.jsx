@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './BlogEntries.css';
+import { BlogContext } from './BlogContext';
 
-const BlogEntries = ({ entries}) => {
+const BlogEntries = () => {
+  const { entries } = useContext(BlogContext);
   return (
     <div className="blog-entries">
       {entries.map((entry, index) => (

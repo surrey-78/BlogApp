@@ -1,9 +1,9 @@
-// src/EditBlogs.jsx
-
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './EditBlogs.css';
+import { BlogContext } from './BlogContext';
 
-const EditBlogs = ({ entries, editBlogEntry}) => {
+const EditBlogs = () => {
+  const { entries, editBlogEntry} = useContext(BlogContext);
   const [searchTerm, setSearchTerm] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
 

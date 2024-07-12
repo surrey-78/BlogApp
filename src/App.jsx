@@ -9,37 +9,17 @@ import DeleteBlogs from './Components/DeleteBlogs';
 import './App.css';
 
 function App() {
-  const [entries, setEntries] = useState([]);
-  const [currentEntry, setCurrentEntry] = useState(null);
-
-  const addBlogEntry = (entry) => {
-    if (currentEntry) {
-      setEntries(entries.map((item, index) => (index === currentEntry.index ? entry : item)));
-      setCurrentEntry(null);
-    } else {
-      setEntries([...entries, entry]);
-    }
-  };
-
-  const editBlogEntry = (index) => {
-    setCurrentEntry({ ...entries[index], index });
-  };
-
-  const deleteBlogEntry = (index) => {
-    setEntries(entries.filter((_, i) => i !== index));
-  };
 
   return (
     <Router>
       <Header />
       <Routes>
         <Route path="/" element={<>
-          <BlogEntryForm addBlogEntry={addBlogEntry} currentEntry={currentEntry} />
-          <BlogEntries entries={entries} editBlogEntry={editBlogEntry} deleteBlogEntry={deleteBlogEntry} />
+          <BlogEntryForm />
+          <BlogEntries />
         </>} />
-        <Route path="/edit-blogs" element={<EditBlogs entries={entries} editBlogEntry={editBlogEntry}  />} />
-        <Route path="/delete-blogs" element={<DeleteBlogs entries={entries} deleteBlogEntry={deleteBlogEntry}  />} />
-      
+        <Route path="/edit-blogs" element={<EditBlogs />} />
+        <Route path="/delete-blogs" element={<DeleteBlogs />} />
       </Routes>
     </Router>
   );

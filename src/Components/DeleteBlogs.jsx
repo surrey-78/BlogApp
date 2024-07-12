@@ -1,9 +1,12 @@
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './EditBlogs.css';
+import { BlogContext } from './BlogContext';
 
-const DeleteBlogs = ({ entries, deleteBlogEntry }) => {
+const DeleteBlogs = () => {
+  const { entries, deleteBlogEntry} = useContext(BlogContext);
   const [searchTerm, setSearchTerm] = useState('');
+  const [editingIndex, setEditingIndex] = useState(null);
 
   const filteredEntries = entries.filter(entry => 
     entry.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -21,9 +24,22 @@ const DeleteBlogs = ({ entries, deleteBlogEntry }) => {
       <div className="blog-entries">
         {filteredEntries.map((entry, index) => (
           <div key={index} className="blog-entry">
-            <h3>{entry.title}</h3>
-            <p>{entry.content}</p>
-            <button onClick={() => deleteBlogEntry(index)}>Delete</button>
+            <h3>
+              {entry.title}
+            </h3>
+            <p>
+              {entry.content}
+            </p>
+            <p>
+              ~{entry.name}
+            </p>
+            {editingIndex === index ? (
+              <button onClick={() => setEditingIndex(null)}>Done</button>
+            ) : (
+              <>
+                <button onClick={() => deleteBlogEntry(index)}>Delete</button>
+              </>
+            )}
           </div>
         ))}
       </div>
