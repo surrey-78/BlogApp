@@ -8,6 +8,7 @@ import EditBlogs from './Components/EditBlogs';
 import DeleteBlogs from './Components/DeleteBlogs';
 import './App.css';
 import AboutUs from './Components/AboutUs';
+import ContactUs from './Components/ContactUs';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/edit-blogs" element={<EditBlogs />} />
         <Route path="/delete-blogs" element={<DeleteBlogs />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </Router>
   );

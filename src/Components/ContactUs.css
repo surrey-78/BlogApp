@@ -1,0 +1,40 @@
+/* src/ContactUs.css */
+
+.contact-us {
+    padding: 20px;
+  }
+  
+  .contact-us h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-us form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-us form label {
+    margin-bottom: 10px;
+  }
+  
+  .contact-us form input,
+  .contact-us form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contact-us form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contact-us form button:hover {
+    background-color: #555;
+  }
+  
