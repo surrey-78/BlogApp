@@ -1,75 +1,76 @@
-
 .blog-entries {
-    margin: 20px auto;
-    max-width: 600px;
-  }
-  
-  .blog-entry {
-    background-color: #414149ce;
-    padding: 20px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(51, 17, 224, 0.1);
-    position: relative;
-  }
-  
-  .blog-entry h3 {
-    margin-top: 0;
-    font-size: 20px;
-  }
-  
-  .blog-entry p {
-    margin: 10px 0 0;
-    line-height: 1.6;
-    font-size: 16px;
-  }
-  
-  .blog-entry button {
-    background-color: #61dafb;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s;
-    border-radius: 5px;
-    margin: 5px;
-  }
-  
-  .blog-entry button:hover {
-    background-color: #21a1f1;
-  }
-  
-  .blog-entry button:nth-of-type(1) {
-    position: absolute;
-    top: 20px;
-    right: 80px;
-  }
-  
-  .blog-entry button:nth-of-type(2) {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  
-  h3{
-    color: black;
-    font-style: italic;
-    font-weight: bolder;
-  }
+  margin: 20px auto;
+  max-width: 100%; /* Adjust as needed */
+  padding: 0 20px; /* Add padding for responsiveness */
+}
 
-  p{
-    font-style: italic;
-    color: black;
-  }
+.blog-entry {
+  background-color: #34495e; /* Match background color from app.css */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjusted box-shadow */
+}
 
-  h4{
-    color: black;
-    font-style: oblique;
-    font-weight: lighter;
-  }
+.blog-entry h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #3498db; /* Match primary color used in app */
+}
 
-  h6{
-    color:black;
-  }
+.blog-entry p {
+  margin: 10px 0 0;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #ecf0f1; /* Light text color for contrast */
+}
+
+.blog-entry button {
+  background-color: #3498db; /* Match button color from app */
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.blog-entry button:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+}
+
+.blog-entry button:nth-of-type(1) {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+}
+
+.blog-entry button:nth-of-type(2) {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Additional Typography Styling */
+h3 {
+  color: #ecf0f1; /* Light text color for contrast */
+  font-style: italic;
+  font-weight: bold;
+}
+
+p {
+  font-style: italic;
+  color: #ecf0f1; /* Light text color for contrast */
+}
+
+h4 {
+  color: #ecf0f1; /* Light text color for contrast */
+  font-style: oblique;
+  font-weight: lighter;
+}
+
+h6 {
+  color: #ecf0f1; /* Light text color for contrast */
+}

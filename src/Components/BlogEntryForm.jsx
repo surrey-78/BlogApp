@@ -17,6 +17,7 @@ const BlogEntryForm = () => {
       setName('');
       setImage('');
   };
+  
   return (
     <form className="blog-entry-form" onSubmit={handleSubmit}>
       <input

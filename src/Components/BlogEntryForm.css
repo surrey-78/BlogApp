@@ -1,11 +1,11 @@
 .blog-entry-form {
-  background-color: #f9f9f9; /* Light gray background */
+  background-image: linear-gradient(0deg ,#001b32 , #185f72 , #00547e , #185f72 ,#001b32); /* Light gray background */
   padding: 20px;
   margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%; /* Ensure form width spans the container */
-  max-width: 600px; /* Limit form width if needed */
+  max-width: 700px; /* Limit form width if needed */
   overflow-y: auto; /* Enable vertical scrolling if content exceeds container height */
   max-height: calc(100vh - 150px); /* Adjust as needed to fit within viewport */
 }

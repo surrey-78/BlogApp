@@ -1,4 +1,3 @@
-
 import React, { useContext } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import Header from './Components/Header';
@@ -23,31 +22,40 @@ const AppWrapper = () => {
   const isAuthPage = location.pathname === '/login' || location.pathname === '/signup';
 
   return (
-    <>
+    <div className="app-wrapper">
       {!isAuthPage && <Header />}
-      <Routes>
-        <Route path="/login" element={<Login />} />
+      <div className="content-wrapper">
+        <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<ProtectedRoute element={<>
-            <BlogEntryForm />
-            <BlogEntries />
-          </>} />} />
-        <Route path="/edit-blogs" element={<ProtectedRoute element={<EditBlogs />} />} />
-        <Route path="/delete-blogs" element={<ProtectedRoute element={<DeleteBlogs />} />} />
-        <Route path="/about" element={<ProtectedRoute element={<AboutUs />} />} />
-        <Route path="/contact" element={<ProtectedRoute element={<ContactUs />} />} />
-      </Routes>
-    </>
+          <Route path="/" element={<ProtectedRoute element={
+            <div className="content-wrapper">
+              <div className="left-panel">
+                <h1>Add Your Blogs</h1>
+                <BlogEntryForm />
+              </div>
+              <div className="right-panel">
+                <BlogEntries />
+              </div>
+            </div>
+          } />} />
+          <Route path="/edit-blogs" element={<ProtectedRoute element={<EditBlogs />} />} />
+          <Route path="/delete-blogs" element={<ProtectedRoute element={<DeleteBlogs />} />} />
+          <Route path="/about" element={<ProtectedRoute element={<AboutUs />} />} />
+          <Route path="/contact" element={<ProtectedRoute element={<ContactUs />} />} />
+        </Routes>
+      </div>
+    </div>
   );
 };
 
 function App() {
-    return (
-      <AuthProvider>
-        <Router>
-          <AppWrapper />
-        </Router>
-      </AuthProvider>
+  return (
+    <AuthProvider>
+      <Router>
+        <AppWrapper />
+      </Router>
+    </AuthProvider>
   );
 }
 
