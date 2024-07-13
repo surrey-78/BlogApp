@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('../images/5488082.jpg'); /* Replace with your image path */
+  background-image: linear-gradient(0deg ,#001b32 , #185f72 , #206c92 , #185f72 ,#001b32);/* Replace with your image path */
   background-size: cover;
   background-position: center;
   color: #ecf0f1; /* Light text color */
@@ -16,6 +16,7 @@ body {
 
 .auth-container {
   border-radius: 8px;
+  background-image: linear-gradient(0deg ,#001b32 , #185f72 , #206c92 , #185f72 ,#001b32);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
   padding: 40px;
   width: 100%;
@@ -64,7 +65,7 @@ body {
 }
 
 .auth-container input {
-  width: 100%;
+  width: 92%;
   padding: 12px;
   margin-bottom: 10px;
   background-color: #ffffff; /* White input background */
