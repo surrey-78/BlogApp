@@ -3,15 +3,15 @@ import './BlogEntries.css';
 import { BlogContext } from './BlogContext';
 
 const BlogEntries = () => {
-  const { entries } = useContext(BlogContext);
+  const { blogs } = useContext(BlogContext);
   return (
     <div className="blog-entries">
-      {entries.map((entry, index) => (
-        <div key={index} className="blog-entry">
-          <h3>{entry.title}</h3>
-          <h6>{entry.image}</h6>
-          <p>{entry.content}</p>
-          <h4>~{entry.name}</h4>
+      {blogs.map((blog) => (
+        <div key={blog.id} className="blog-entry">
+          <h3>{blog.title}</h3>
+          <h6>{blog.image}</h6>
+          <p>{blog.content}</p>
+          <h4>~{blog.name}</h4>
           </div>
       ))}
     </div>

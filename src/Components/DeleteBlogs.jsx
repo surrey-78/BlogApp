@@ -4,11 +4,11 @@ import './EditBlogs.css';
 import { BlogContext } from './BlogContext';
 
 const DeleteBlogs = () => {
-  const { entries, deleteBlogEntry} = useContext(BlogContext);
+  const { blogs, deleteBlogEntry} = useContext(BlogContext);
   const [searchTerm, setSearchTerm] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
 
-  const filteredEntries = entries.filter(entry => 
+  const filteredEntries = blogs.filter(entry => 
     entry.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -22,22 +22,22 @@ const DeleteBlogs = () => {
         className="search-bar"
       />
       <div className="blog-entries">
-        {filteredEntries.map((entry, index) => (
-          <div key={index} className="blog-entry">
+        {filteredEntries.map((blog) => (
+          <div key={blog.id} className="blog-entry">
             <h3>
-              {entry.title}
+              {blog.title}
             </h3>
             <p>
-              {entry.content}
+              {blog.content}
             </p>
             <p>
-              ~{entry.name}
+              ~{blog.name}
             </p>
-            {editingIndex === index ? (
+            {editingIndex === blog.id ? (
               <button onClick={() => setEditingIndex(null)}>Done</button>
             ) : (
               <>
-                <button onClick={() => deleteBlogEntry(index)}>Delete</button>
+                <button onClick={() => deleteBlogEntry(blog.id)}>Delete</button>
               </>
             )}
           </div>

@@ -3,11 +3,11 @@ import './EditBlogs.css';
 import { BlogContext } from './BlogContext';
 
 const EditBlogs = () => {
-  const { entries, editBlogEntry} = useContext(BlogContext);
+  const { blogs, editBlogEntry} = useContext(BlogContext);
   const [searchTerm, setSearchTerm] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
 
-  const filteredEntries = entries.filter(entry => 
+  const filteredEntries = blogs.filter(entry => 
     entry.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -26,34 +26,34 @@ const EditBlogs = () => {
         className="search-bar"
       />
       <div className="blog-entries">
-        {filteredEntries.map((entry, index) => (
-          <div key={index} className="blog-entry">
+        {filteredEntries.map((blog) => (
+          <div key={blog.id} className="blog-entry">
             <h3
-              contentEditable={editingIndex === index}
+              contentEditable={editingIndex === blog.id}
               suppressContentEditableWarning={true}
               onBlur={(e) => handleEditChange(e, 'title')}
             >
-              {entry.title}
+              {blog.title}
             </h3>
             <p
-              contentEditable={editingIndex === index}
+              contentEditable={editingIndex === blog.id}
               suppressContentEditableWarning={true}
               onBlur={(e) => handleEditChange(e, 'content')}
             >
-              {entry.content}
+              {blog.content}
             </p>
             <p
-              contentEditable={editingIndex === index}
+              contentEditable={editingIndex === blog.id}
               suppressContentEditableWarning={true}
               onBlur={(e) => handleEditChange(e, 'name')}
             >
-              ~{entry.name}
+              ~{blog.name}
             </p>
-            {editingIndex === index ? (
+            {editingIndex === blog.id ? (
               <button onClick={() => setEditingIndex(null)}>Done</button>
             ) : (
               <>
-                <button onClick={() => setEditingIndex(index)}>Edit</button>
+                <button onClick={() => setEditingIndex(blog.id)}>Edit</button>
               </>
             )}
           </div>

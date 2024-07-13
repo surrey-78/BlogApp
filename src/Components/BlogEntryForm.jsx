@@ -7,11 +7,12 @@ const BlogEntryForm = () => {
   const [name, setName] = useState('');
   const [content, setContent] = useState('');
   const [image, setImage] = useState('');
-  const { addBlogEntry } = useContext(BlogContext);
+  const { addBlog } = useContext(BlogContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-      addBlogEntry({ title, content, name ,image});
+    if (!title || !content || !image || !name) return;
+      addBlog({ title, content, name ,image});
       setTitle('');
       setContent('');
       setName('');

@@ -29,7 +29,7 @@ const AppWrapper = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/" element={<ProtectedRoute element={
-            <div className="content-wrapper">
+            <div className="panels-wrapper">
               <div className="left-panel">
                 <h1>Add Your Blogs</h1>
                 <BlogEntryForm />
