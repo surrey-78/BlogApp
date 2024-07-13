@@ -5,7 +5,9 @@
 
 h1{
   color: #fff;
+  margin-left: 20px;
 }
+
 .content-wrapper {
   display: flex;
   margin-top: 80px; /* Space below the header */
@@ -13,22 +15,27 @@ h1{
 }
 
 .left-panel, .right-panel {
-  flex: 1;
   overflow-y: auto;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
 .left-panel {
+  flex: 1;
   background-image: linear-gradient(1deg , #05040c3e, #0f006153, #0f006153, #05040c3e);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .right-panel {
+  flex: 1;
   background-image: linear-gradient(1deg , #05040c3e, #0f006153, #0f006153, #05040c3e);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .blog-entry-form {
@@ -83,5 +90,6 @@ h1{
 
   .left-panel, .right-panel {
     border-radius: 0;
+    margin: 0;
   }
 }
