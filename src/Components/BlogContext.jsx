@@ -5,8 +5,8 @@ export const BlogContext = createContext();
 export const BlogProvider = ({ children }) => {
   const [blogs, setBlogs] = useState([
     // Example blogs
-    { id: 1, title: 'First Blog', content: 'This is the content of the first blog', name: 'Author 1', image: "../images/react.png" },
-    { id: 2, title: 'Second Blog', content: 'This is the content of the second blog', name: 'Author 2', image: null },
+    { id: 1, title: 'First Blog', content: 'This is the content of the first blog', name: 'Author 1', image: '/images/react.png' },
+    { id: 2, title: 'Second Blog', content: 'This is the content of the second blog', name: 'Author 2', image: '/images/javascript.png' },
   ]);
 
   const editBlogEntry = (id, updatedEntry) => {
