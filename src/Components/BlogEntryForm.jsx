@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import './BlogEntryForm.css';
 import { BlogContext } from './BlogContext';
 
@@ -6,19 +6,29 @@ const BlogEntryForm = () => {
   const [title, setTitle] = useState('');
   const [name, setName] = useState('');
   const [content, setContent] = useState('');
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState(null);
   const { addBlog } = useContext(BlogContext);
+  const fileInputRef = useRef(null); // Reference for the file input
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!title || !content || !image || !name) return;
-      addBlog({ title, content, name ,image});
-      setTitle('');
-      setContent('');
-      setName('');
-      setImage('');
+    if (!title || !content || !name) return;
+    addBlog({ title, content, name, image });
+    setTitle('');
+    setContent('');
+    setName('');
+    setImage(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = ''; // Reset the file input
+    }
   };
-  
+
+  const handleImageChange = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      setImage(e.target.files[0]);
+    }
+  };
+
   return (
     <form className="blog-entry-form" onSubmit={handleSubmit}>
       <input
@@ -37,11 +47,9 @@ const BlogEntryForm = () => {
       />
       <input
         type="file"
-        placeholder="Upload image"
-        value={image}
-        accept='image/*'
-        onChange={(e) => setImage(e.target.value)}
-        required
+        accept="image/*"
+        onChange={handleImageChange}
+        ref={fileInputRef} // Assign the ref to the file input
       />
       <textarea
         placeholder="Content"

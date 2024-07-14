@@ -41,6 +41,30 @@ h1 {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-left: 20px;
+  color: #333; /* Dark grey text color for better readability */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Ensure headings and paragraphs have appropriate colors */
+.right-panel h1,
+.right-panel h2,
+.right-panel h3,
+.right-panel h4,
+.right-panel h5,
+.right-panel h6 {
+  color: #333; /* Dark grey for headings */
+}
+
+.right-panel p {
+  color: #555; /* Slightly lighter grey for paragraph text */
+}
+
+.blog-entry img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .blog-entry-form {
