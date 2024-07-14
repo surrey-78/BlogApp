@@ -23,11 +23,11 @@ const DeleteBlogs = () => {
         {filteredEntries.map((blog) => (
           <div key={blog.id} className="blog-entry">
             <h3>{blog.title}</h3>
-            <p>{blog.content}</p>
-            <p>~{blog.name}</p>
             {blog.image && (
               <img src={blog.image} alt="Blog" style={{ width: '100%', borderRadius: '10px' }} />
             )}
+            <p>{blog.content}</p>
+            <p>~{blog.name}</p>
             <button onClick={() => deleteBlogEntry(blog.id)}>Delete</button>
           </div>
         ))}

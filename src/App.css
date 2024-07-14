@@ -48,7 +48,7 @@ h1 {
   flex: 1; /* Increase width of right panel */
   background-image: linear-gradient(1deg , #05040c3e, #0f006153, #0f006153, #05040c3e);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   margin-left: 20px;
   color: #333; /* Dark grey text color for better readability */
   padding: 20px;

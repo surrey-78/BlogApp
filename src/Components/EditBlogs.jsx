@@ -62,6 +62,16 @@ const EditBlogs = () => {
             >
               {blog.title}
             </h3>
+            {editingId === blog.id && (
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => handleEditChange(e, 'image')}
+              />
+            )}
+            {blog.image && (
+              <img src={blog.image} alt="Blog" style={{ width: '100%', borderRadius: '10px' }} />
+            )}
             <p
               contentEditable={editingId === blog.id}
               suppressContentEditableWarning={true}
@@ -78,16 +88,7 @@ const EditBlogs = () => {
             >
               ~{blog.name}
             </p>
-            {editingId === blog.id && (
-              <input
-                type="file"
-                accept="image/*"
-                onChange={(e) => handleEditChange(e, 'image')}
-              />
-            )}
-            {blog.image && (
-              <img src={blog.image} alt="Blog" style={{ width: '100%', borderRadius: '10px' }} />
-            )}
+            
             {editingId === blog.id ? (
               <button onClick={() => {
                 handleBlur(blog.id);

@@ -4,7 +4,7 @@
   max-width: 600px;
   background-image: linear-gradient(0deg ,#001b32 , #185f72 , #206c92 , #185f72 ,#001b32);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   max-height: 80vh; /* Restrict height */
   overflow-y: auto; /* Add vertical scroll */
 }
