@@ -3,17 +3,28 @@ import './EditBlogs.css';
 import { BlogContext } from './BlogContext';
 
 const EditBlogs = () => {
-  const { blogs, editBlogEntry} = useContext(BlogContext);
+  const { blogs, editBlogEntry } = useContext(BlogContext);
   const [searchTerm, setSearchTerm] = useState('');
-  const [editingIndex, setEditingIndex] = useState(null);
+  const [editingId, setEditingId] = useState(null);
+  const [editedContent, setEditedContent] = useState({});
 
-  const filteredEntries = blogs.filter(entry => 
+  const filteredEntries = blogs.filter(entry =>
     entry.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleEditChange = (e, field) => {
-    const updatedEntry = { ...entries[editingIndex], [field]: e.target.textContent };
-    editBlogEntry(editingIndex, updatedEntry);
+    setEditedContent({
+      ...editedContent,
+      [field]: e.target.textContent
+    });
+  };
+
+  const handleBlur = (id) => {
+    if (editingId === id) {
+      const updatedEntry = { ...blogs.find(blog => blog.id === id), ...editedContent };
+      editBlogEntry(id, updatedEntry);
+      setEditingId(null);
+    }
   };
 
   return (
@@ -29,32 +40,38 @@ const EditBlogs = () => {
         {filteredEntries.map((blog) => (
           <div key={blog.id} className="blog-entry">
             <h3
-              contentEditable={editingIndex === blog.id}
+              contentEditable={editingId === blog.id}
               suppressContentEditableWarning={true}
-              onBlur={(e) => handleEditChange(e, 'title')}
+              onInput={(e) => handleEditChange(e, 'title')}
+              onBlur={() => handleBlur(blog.id)}
             >
               {blog.title}
             </h3>
             <p
-              contentEditable={editingIndex === blog.id}
+              contentEditable={editingId === blog.id}
               suppressContentEditableWarning={true}
-              onBlur={(e) => handleEditChange(e, 'content')}
+              onInput={(e) => handleEditChange(e, 'content')}
+              onBlur={() => handleBlur(blog.id)}
             >
               {blog.content}
             </p>
             <p
-              contentEditable={editingIndex === blog.id}
+              contentEditable={editingId === blog.id}
               suppressContentEditableWarning={true}
-              onBlur={(e) => handleEditChange(e, 'name')}
+              onInput={(e) => handleEditChange(e, 'name')}
+              onBlur={() => handleBlur(blog.id)}
             >
               ~{blog.name}
             </p>
-            {editingIndex === blog.id ? (
-              <button onClick={() => setEditingIndex(null)}>Done</button>
+            {editingId === blog.id ? (
+              <button onClick={() => setEditingId(null)}>Done</button>
             ) : (
-              <>
-                <button onClick={() => setEditingIndex(blog.id)}>Edit</button>
-              </>
+              <button onClick={() => {
+                setEditingId(blog.id);
+                setEditedContent(blog); // Initialize edited content with current blog data
+              }}>
+                Edit
+              </button>
             )}
           </div>
         ))}

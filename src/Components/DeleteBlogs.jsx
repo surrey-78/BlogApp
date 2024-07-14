@@ -1,12 +1,10 @@
-
 import React, { useContext, useState } from 'react';
 import './EditBlogs.css';
 import { BlogContext } from './BlogContext';
 
 const DeleteBlogs = () => {
-  const { blogs, deleteBlogEntry} = useContext(BlogContext);
+  const { blogs, deleteBlogEntry } = useContext(BlogContext);
   const [searchTerm, setSearchTerm] = useState('');
-  const [editingIndex, setEditingIndex] = useState(null);
 
   const filteredEntries = blogs.filter(entry => 
     entry.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -33,13 +31,7 @@ const DeleteBlogs = () => {
             <p>
               ~{blog.name}
             </p>
-            {editingIndex === blog.id ? (
-              <button onClick={() => setEditingIndex(null)}>Done</button>
-            ) : (
-              <>
-                <button onClick={() => deleteBlogEntry(blog.id)}>Delete</button>
-              </>
-            )}
+            <button onClick={() => deleteBlogEntry(blog.id)}>Delete</button>
           </div>
         ))}
       </div>
