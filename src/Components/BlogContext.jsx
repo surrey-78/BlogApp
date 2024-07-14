@@ -10,9 +10,9 @@ export const BlogProvider = ({ children }) => {
   ]);
 
   const editBlogEntry = (id, updatedEntry) => {
-    setBlogs(blogs.map(blog => blog.id === id ? updatedEntry : blog));
+    setBlogs(blogs.map(blog => (blog.id === id ? updatedEntry : blog)));
   };
-
+  
   const deleteBlogEntry = (id) => {
     setBlogs(blogs.filter(blog => blog.id !== id));
   };

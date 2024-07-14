@@ -6,7 +6,7 @@ const DeleteBlogs = () => {
   const { blogs, deleteBlogEntry } = useContext(BlogContext);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredEntries = blogs.filter(entry => 
+  const filteredEntries = blogs.filter(entry =>
     entry.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -22,15 +22,12 @@ const DeleteBlogs = () => {
       <div className="blog-entries">
         {filteredEntries.map((blog) => (
           <div key={blog.id} className="blog-entry">
-            <h3>
-              {blog.title}
-            </h3>
-            <p>
-              {blog.content}
-            </p>
-            <p>
-              ~{blog.name}
-            </p>
+            <h3>{blog.title}</h3>
+            <p>{blog.content}</p>
+            <p>~{blog.name}</p>
+            {blog.image && (
+              <img src={blog.image} alt="Blog" style={{ width: '100%', borderRadius: '10px' }} />
+            )}
             <button onClick={() => deleteBlogEntry(blog.id)}>Delete</button>
           </div>
         ))}

@@ -1,3 +1,4 @@
+// EditBlogs.jsx
 import React, { useContext, useState } from 'react';
 import './EditBlogs.css';
 import { BlogContext } from './BlogContext';
@@ -13,10 +14,24 @@ const EditBlogs = () => {
   );
 
   const handleEditChange = (e, field) => {
-    setEditedContent({
-      ...editedContent,
-      [field]: e.target.textContent
-    });
+    if (field === 'image') {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          setEditedContent({
+            ...editedContent,
+            image: reader.result
+          });
+        };
+        reader.readAsDataURL(file);
+      }
+    } else {
+      setEditedContent({
+        ...editedContent,
+        [field]: e.target.textContent
+      });
+    }
   };
 
   const handleBlur = (id) => {
@@ -63,8 +78,21 @@ const EditBlogs = () => {
             >
               ~{blog.name}
             </p>
+            {editingId === blog.id && (
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => handleEditChange(e, 'image')}
+              />
+            )}
+            {blog.image && (
+              <img src={blog.image} alt="Blog" style={{ width: '100%', borderRadius: '10px' }} />
+            )}
             {editingId === blog.id ? (
-              <button onClick={() => setEditingId(null)}>Done</button>
+              <button onClick={() => {
+                handleBlur(blog.id);
+                setEditingId(null);
+              }}>Done</button>
             ) : (
               <button onClick={() => {
                 setEditingId(blog.id);

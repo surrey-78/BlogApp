@@ -1,64 +1,108 @@
-
 .edit-blogs {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 80vh; /* Restrict height */
+  overflow-y: auto; /* Add vertical scroll */
+}
+
+.search-bar {
+  width: 92%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.blog-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-entry {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.blog-entry h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.blog-entry p {
+  margin: 10px 0 0;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #555;
+}
+
+.blog-entry button {
+  background-color: #61dafb;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.blog-entry button:hover {
+  background-color: #21a1f1;
+}
+
+.blog-entry button:nth-of-type(1) {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+}
+
+.blog-entry button:nth-of-type(2) {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .edit-blogs {
+    max-width: 90%;
   }
-  
-  .search-bar {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
+
   .blog-entry {
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
+    padding: 15px;
   }
-  
+
   .blog-entry h3 {
-    margin-top: 0;
-    font-size: 20px;
+    font-size: 18px;
   }
-  
+
   .blog-entry p {
-    margin: 10px 0 0;
-    line-height: 1.6;
-    font-size: 16px;
-  }
-  
-  .blog-entry button {
-    background-color: #61dafb;
-    border: none;
-    padding: 10px;
-    color: white;
-    cursor: pointer;
     font-size: 14px;
-    transition: background-color 0.3s;
-    border-radius: 5px;
-    margin: 5px;
   }
-  
-  .blog-entry button:hover {
-    background-color: #21a1f1;
+
+  .blog-entry button {
+    padding: 8px;
+    font-size: 12px;
   }
-  
+
   .blog-entry button:nth-of-type(1) {
-    position: absolute;
-    top: 20px;
-    right: 80px;
+    top: 15px;
+    right: 60px;
   }
-  
+
   .blog-entry button:nth-of-type(2) {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
   }
-  
+}
