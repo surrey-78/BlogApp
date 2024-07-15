@@ -12,6 +12,7 @@ const BlogEntries = () => {
 
   return (
     <div className="blog-entries">
+      <h1 className='color-comp'>Recent Blogs</h1>
       <input
         type="text"
         placeholder="Search by title..."

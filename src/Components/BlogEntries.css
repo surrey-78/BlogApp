@@ -12,6 +12,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjusted box-shadow */
 }
 
+.color-comp{
+  color: #fff;
+}
+
 .blog-entry h3 {
   margin-top: 0;
   font-size: 20px;
@@ -54,7 +58,7 @@
 }
 
 /* Additional Typography Styling */
-h3 {
+h3 , h1{
   color: #ecf0f1; /* Light text color for contrast */
   font-style: italic;
   font-weight: bold;
