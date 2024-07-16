@@ -64,21 +64,6 @@ h1 {
   margin: 0 auto;
 }
 
-.blog-entry-form {
-  background-color: #fff;
-  width: 90%;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.blog-entry-form h1 {
-  margin-top: 0;
-  font-size: 24px;
-  color: #000;
-}
-
 .blog-entry-form input,
 .blog-entry-form textarea {
   width: 100%;

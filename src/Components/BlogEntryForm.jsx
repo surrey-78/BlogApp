@@ -31,6 +31,7 @@ const BlogEntryForm = () => {
 
   return (
     <form className="blog-entry-form" onSubmit={handleSubmit}>
+      <h1>Add Your Blogs</h1>
       <input
         type="text"
         placeholder="Title"
