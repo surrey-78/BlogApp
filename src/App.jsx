@@ -11,8 +11,8 @@ import Login from './Components/Login';
 import Signup from './Components/SignUp';
 import PeopleList from './Components/PeopleList';
 import IndividualBlog from './Components/IndividualBlog';
-import './App.css';
 import BlogEntryForm from './Components/BlogEntryForm';
+import './App.css';
 
 const ProtectedRoute = ({ element }) => {
   const { isAuthenticated } = useContext(AuthContext);

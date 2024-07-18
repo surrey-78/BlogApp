@@ -5,6 +5,7 @@ body, html {
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+  font-family: Arial, sans-serif;
 }
 
 .app-wrapper {
@@ -15,13 +16,16 @@ body, html {
 
 .header {
   width: 100%;
-  background-color: #333;
+  background-image: linear-gradient(1deg, #05040c3e, #0f006153);
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-title {
@@ -37,7 +41,7 @@ body, html {
 .content-wrapper {
   display: flex;
   flex: 1;
-  padding-top: 20px;
+  padding-top: 60px; /* Space for fixed header */
   overflow: hidden;
 }
 
@@ -47,7 +51,6 @@ body, html {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-image: linear-gradient(0deg ,#001b32 , #185f72 , #00547e , #185f72 ,#001b32);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   overflow: hidden;
@@ -69,8 +72,13 @@ body, html {
 }
 
 .person-card {
+  display: flex;
+  align-items: center;
   margin-bottom: 15px;
   cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   transition: background-color 0.3s;
 }
 
@@ -99,7 +107,6 @@ body, html {
   border-radius: 10px;
 }
 
-
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .content-wrapper {
@@ -108,6 +115,7 @@ body, html {
 
   .left-panel, .right-panel {
     flex: 1 0 100%; /* Make each panel take full width on small screens */
+    border-right: none;
     border-radius: 0;
   }
 }
