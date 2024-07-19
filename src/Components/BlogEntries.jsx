@@ -15,7 +15,7 @@ const BlogEntries = () => {
               <img src={blog.image} alt={blog.title} />
             )}
             <p>{blog.content}</p>
-            <h4>~{blog.name}</h4>
+            <p><b>~{blog.name}</b></p>
           </div>
         ))}
       </div>
