@@ -1,27 +1,62 @@
 /* PeopleList.css */
 .people-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+  background-image: linear-gradient(0deg, #001b32, #185f72, #00547e, #185f72, #001b32);
 }
 
 .person-card {
+  flex: 1 1 calc(33.33% - 20px); /* Calculate width to ensure 3 cards per row */
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 15px;
-  cursor: pointer;
+  margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #001b32; /* Dark text color for contrast */
 }
 
 .person-card:hover {
-  background-color: #e0e0e0;
+  background-color: rgba(255, 255, 255, 1); /* Fully white background on hover */
+  transform: translateY(-5px); /* Slight lift on hover */
 }
 
 .person-image {
-  width: 50px;
-  height: 50px;
+  width: 80px; /* Larger image size */
+  height: 80px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.person-details {
+  text-align: center;
+  color: #001b32; /* Dark text color for contrast */
+}
+
+.person-details h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.person-details p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+@media (max-width: 992px) {
+  .person-card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .person-card {
+    flex: 1 1 100%; /* 1 card per row for small screens */
+  }
 }

@@ -27,28 +27,26 @@ const AppWrapper = () => {
     <div className="app-wrapper">
       {!isAuthPage && <Header />}
       <div className="content-wrapper">
-        <div className="container">
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/" element={<ProtectedRoute element={
-              <div className="panels-wrapper">
-                <div className="left-panel">
-                  <BlogEntries />
-                </div>
-                <div className="right-panel">
-                  <PeopleList />
-                </div>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/" element={<ProtectedRoute element={
+            <div className="container">
+              <div className="left-panel">
+                <BlogEntries />
               </div>
-            } />} />
-            <Route path="/add-blogs" element={<ProtectedRoute element={<BlogEntryForm />} />} />
-            <Route path="/edit-blogs" element={<ProtectedRoute element={<EditBlogs />} />} />
-            <Route path="/delete-blogs" element={<ProtectedRoute element={<DeleteBlogs />} />} />
-            <Route path="/about" element={<ProtectedRoute element={<AboutUs />} />} />
-            <Route path="/contact" element={<ProtectedRoute element={<ContactUs />} />} />
-            <Route path="/blogs/:id" element={<ProtectedRoute element={<IndividualBlog />} />} />
-          </Routes>
-        </div>
+              <div className="right-panel">
+                <PeopleList />
+              </div>
+            </div>
+          } />} />
+          <Route path="/add-blogs" element={<ProtectedRoute element={<BlogEntryForm />} />} />
+          <Route path="/edit-blogs" element={<ProtectedRoute element={<EditBlogs />} />} />
+          <Route path="/delete-blogs" element={<ProtectedRoute element={<DeleteBlogs />} />} />
+          <Route path="/about" element={<ProtectedRoute element={<AboutUs />} />} />
+          <Route path="/contact" element={<ProtectedRoute element={<ContactUs />} />} />
+          <Route path="/blogs/:id" element={<ProtectedRoute element={<IndividualBlog />} />} />
+        </Routes>
       </div>
     </div>
   );
