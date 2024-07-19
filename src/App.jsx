@@ -5,7 +5,6 @@ import BlogEntries from './Components/BlogEntries';
 import EditBlogs from './Components/EditBlogs';
 import DeleteBlogs from './Components/DeleteBlogs';
 import AboutUs from './Components/AboutUs';
-import ContactUs from './Components/ContactUs';
 import { AuthContext, AuthProvider } from './Components/AuthContext';
 import Login from './Components/Login';
 import Signup from './Components/SignUp';

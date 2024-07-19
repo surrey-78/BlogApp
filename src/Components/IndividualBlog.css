@@ -28,7 +28,7 @@
 
 .blog-image {
   width: 100%;
-  max-height: 400px;
+  height: 75%;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 20px;
