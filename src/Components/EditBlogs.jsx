@@ -12,7 +12,7 @@ const RecentBlogs = () => {
         <div key={blog.id} className="blog-entry">
           <h3>{blog.title}</h3>
           {blog.image && (
-            <img src={blog.image} alt={blog.title} style={{ width: '100%', borderRadius: '10px' }} />
+            <img src={blog.image} alt={blog.title} style={{ width: '95%', borderRadius: '10px' }} />
           )}
           <p>{blog.content}</p>
           <h4>~{blog.name}</h4>

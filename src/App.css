@@ -68,16 +68,20 @@ body, html {
 }
 
 .left-panel {
-  flex: 0 0 70%;
+  flex: 0 0 60%;
   display: flex;
   flex-direction: column; /* Ensure vertical layout */
   align-items: center;
   border-right: 1px solid #ddd;
+  border-radius: 15px;
 }
 
 .right-panel {
-  flex: 0 0 30%;
+  flex: 0 0 40%;
+  border-radius: 15px;
+  box-sizing: border-box;
 }
+
 
 .blog-entries {
   display: flex;
@@ -92,9 +96,9 @@ body, html {
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #fff;
-  color: #000; /* Ensure text is readable */
+  color: #ffffff; /* Ensure text is readable */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-  width: 100%; /* Ensure entries take the full width of the panel */
+  width: 90%; /* Ensure entries take the full width of the panel */
   max-width: 600px; /* Optional: Limit the max width of entries */
 }
 

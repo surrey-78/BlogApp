@@ -1,22 +1,33 @@
+/* EditBlogs.css */
+
 .edit-blogs-container {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 80px); /* Adjust height to avoid overlapping with header */
   overflow: hidden;
-}
-
-.left-panel, .right-panel {
-  flex: 1;
-  overflow-y: auto;
-  padding: 20px;
-  box-sizing: border-box;
+  padding-top: 20px; /* Space for the fixed header */
 }
 
 .left-panel {
+  flex: 0 0 60%; /* 60% width */
+  background-image: linear-gradient(0deg, #001b32, #193d47, #204b63, #193d47, #001b32);
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
   border-right: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.right-panel {
+  flex: 0 0 40%; /* 40% width */
+  background-image: linear-gradient(0deg, #001b32, #193d47, #204b63, #193d47, #001b32);
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
 }
 
 .search-bar {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -80,22 +91,25 @@
 
 .recent-blogs h2 {
   margin-top: 0;
-  font-size: 24px;
-  color: #333;
+  font-size: 30px;
+  color: #fff;
 }
 
 .recent-blogs .blog-entry {
   margin-bottom: 20px;
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .edit-blogs-container {
     flex-direction: column;
+    padding-top: 50px; /* Adjust padding for smaller screens */
   }
 
   .left-panel, .right-panel {
-    width: 100%;
-    height: 50vh;
+    flex: 1 0 100%; /* Make each panel take full width on small screens */
+    height: auto; /* Allow height to adjust automatically */
+    border-right: none; /* Remove border for mobile view */
   }
 
   .blog-entry {
