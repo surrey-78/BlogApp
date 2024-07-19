@@ -44,7 +44,6 @@ const AppWrapper = () => {
           <Route path="/edit-blogs" element={<ProtectedRoute element={<EditBlogs />} />} />
           <Route path="/delete-blogs" element={<ProtectedRoute element={<DeleteBlogs />} />} />
           <Route path="/about" element={<ProtectedRoute element={<AboutUs />} />} />
-          <Route path="/contact" element={<ProtectedRoute element={<ContactUs />} />} />
           <Route path="/blogs/:id" element={<ProtectedRoute element={<IndividualBlog />} />} />
         </Routes>
       </div>

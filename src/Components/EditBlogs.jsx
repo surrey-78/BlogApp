@@ -71,6 +71,7 @@ const EditBlogs = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           className="search-bar"
         />
+        <u className='sizer'>Edit Blogs</u>
         <div className="blog-entries">
           {filteredEntries.map((blog) => (
             <div key={blog.id} className="blog-entry">

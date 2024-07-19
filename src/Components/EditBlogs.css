@@ -7,6 +7,11 @@
   padding-top: 20px; /* Space for the fixed header */
 }
 
+.sizer{
+  font-size: 30px;
+  font-weight: 500;
+}
+
 .left-panel {
   flex: 0 0 60%; /* 60% width */
   background-image: linear-gradient(0deg, #001b32, #193d47, #204b63, #193d47, #001b32);
@@ -54,6 +59,7 @@
   font-size: 20px;
   color: #333;
 }
+
 
 .blog-entry p {
   margin: 10px 0 0;
