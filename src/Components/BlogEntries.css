@@ -1,55 +1,18 @@
-.blog-entries-container {
-  background-image: linear-gradient(0deg ,#001b32 , #185f72 , #00547e , #185f72 ,#001b32); /* Light gray background */
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-  width: 100%; /* Ensure form width spans the container */
-  max-width: 700px; /* Limit form width if needed */
-  overflow-y: auto; /* Enable vertical scrolling if content exceeds container height */
-  max-height: calc(100vh - 150px); /* Adjust as needed to fit within viewport */
-}
-
+/* BlogEntries.css */
 .blog-entries {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Add spacing between blog entries */
+  align-items: center;
+  width: 100%; /* Ensure it takes the full width of the left panel */
 }
 
 .blog-entry {
-  background-color: #f5f5f5;
-  padding: 20px;
-  width: 500px;
+  margin: 20px auto; /* Center entries within the panel */
+  padding: 10px;
+  border: 1px solid #ddd;
   border-radius: 10px;
+  background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.blog-entry img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .blog-entries-container {
-    max-width: 90%; /* Reduce max width for smaller screens */
-  }
-
-  .blog-entry {
-    padding: 15px;
-  }
-
-  .blog-entry h3 {
-    font-size: 18px;
-  }
-
-  .blog-entry p {
-    font-size: 14px;
-  }
-
-  .blog-entry img {
-    max-width: 100%;
-    height: auto;
-  }
+  width: 100%; /* Ensure entries take the full width of the panel */
+  max-width: 600px; /* Optional: Limit the max width of entries */
 }

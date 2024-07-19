@@ -45,7 +45,6 @@ body, html {
   flex: 1;
   padding-top: 60px; /* Space for fixed header */
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent container background */
 }
 
 .container {
@@ -60,13 +59,16 @@ body, html {
 }
 
 .left-panel, .right-panel {
-  height: calc(100vh - 80px); /* Adjusted to fit within the content-wrapper */
-  overflow-y: auto;
+  height: calc(100vh - 80px); /* Adjust height to fit within the content-wrapper */
+  overflow-y: auto; /* Enable vertical scrolling */
   padding: 10px;
 }
 
 .left-panel {
   flex: 0 0 70%;
+  display: flex;
+  flex-direction: column; /* Ensure vertical layout */
+  align-items: center;
   border-right: 1px solid #ddd;
 }
 
@@ -74,18 +76,23 @@ body, html {
   flex: 0 0 30%;
 }
 
+.blog-entries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensure it takes the full width of the left panel */
+}
+
 .blog-entry {
-  margin-bottom: 20px;
-  padding: 10px;
+  margin: 20px 0; /* Center entries within the panel */
+  padding: 20px; /* Increased padding for better spacing */
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #fff;
+  color: #000; /* Ensure text is readable */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.blog-entry img {
-  width: 100%;
-  border-radius: 10px;
+  width: 100%; /* Ensure entries take the full width of the panel */
+  max-width: 600px; /* Optional: Limit the max width of entries */
 }
 
 /* Media Queries for Responsiveness */
