@@ -21,6 +21,8 @@ export const BlogProvider = ({ children }) => {
     { id: 15, title: 'Fifteenth Blog', content: 'Go, also known as Golang, is a statically typed, compiled programming language designed at Google. It is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency. Go is often used for cloud and server-side applications.', name: 'Author 15', image: '/images/go.png' },
   ]);
 
+  const [people, setPeople] = useState([]);
+
   const editBlogEntry = (id, updatedEntry) => {
     setBlogs(blogs.map(blog => (blog.id === id ? updatedEntry : blog)));
   };
@@ -32,11 +34,18 @@ export const BlogProvider = ({ children }) => {
   const addBlog = (blog) => {
     const imageUrl = URL.createObjectURL(blog.image);
     const newBlog = { ...blog, id: blogs.length + 1, image: imageUrl };
+
+    // Update blogs
     setBlogs([...blogs, newBlog]);
+
+    // Update people list
+    if (!people.find(person => person.name === blog.name)) {
+      setPeople([...people, { name: blog.name, image: imageUrl }]);
+    }
   };
 
   return (
-    <BlogContext.Provider value={{ blogs, editBlogEntry , deleteBlogEntry , addBlog}}>
+    <BlogContext.Provider value={{ blogs, editBlogEntry, deleteBlogEntry, addBlog, people }}>
       {children}
     </BlogContext.Provider>
   );

@@ -18,7 +18,7 @@
   border-radius: 10px;
   transition: background-color 0.3s, transform 0.3s;
   background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   color: #001b32; /* Dark text color for contrast */
 }
 

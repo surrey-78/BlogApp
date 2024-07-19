@@ -24,9 +24,10 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
 }
 
@@ -43,12 +44,14 @@ body, html {
 .content-wrapper {
   display: flex;
   flex: 1;
-  padding-top: 60px; /* Space for fixed header */
+  padding-top: 70px; /* Adjusted for the fixed header height */
+  margin-top: 20px; /* Optional: Additional space for aesthetics */
   overflow: hidden;
 }
 
 .container {
   display: flex;
+  background-image: linear-gradient(0deg, #001b32, #193d47, #204b63, #193d47, #001b32);
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -90,7 +93,7 @@ body, html {
   border-radius: 10px;
   background-color: #fff;
   color: #000; /* Ensure text is readable */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   width: 100%; /* Ensure entries take the full width of the panel */
   max-width: 600px; /* Optional: Limit the max width of entries */
 }
@@ -99,6 +102,7 @@ body, html {
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column;
+    padding-top: 60px; /* Adjust padding for smaller screens */
   }
 
   .left-panel, .right-panel {

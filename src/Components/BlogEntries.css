@@ -12,7 +12,7 @@
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   width: 100%; /* Ensure entries take the full width of the panel */
   max-width: 600px; /* Optional: Limit the max width of entries */
 }

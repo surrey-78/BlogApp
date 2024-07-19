@@ -1,9 +1,9 @@
 .blog-entry-form {
-  background-image: linear-gradient(0deg ,#001b32 , #185f72 , #00547e , #185f72 ,#001b32); /* Light gray background */
+  background-image: linear-gradient(0deg, #001b32, #193d47, #204b63, #193d47, #001b32); /* Gradient background */
   padding: 20px;
   margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Thicker shadow effect */
   width: 100%; /* Ensure form width spans the container */
   max-width: 700px; /* Limit form width if needed */
   overflow-y: auto; /* Enable vertical scrolling if content exceeds container height */
@@ -47,7 +47,7 @@
 
 /* Hover and focus effects */
 .blog-entry-form:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
   transform: translateY(-5px);
 }
 
@@ -57,7 +57,7 @@
   border-color: #61dafb;
 }
 
-.font-color{
+.font-color {
   font-size: 24px;
   color: #fff;
 }
