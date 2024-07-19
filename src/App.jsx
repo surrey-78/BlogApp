@@ -29,7 +29,7 @@ const AppWrapper = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<ProtectedRoute element={
+          <Route path="/" element={
             <div className="container">
               <div className="left-panel">
                 <BlogEntries />
@@ -38,12 +38,12 @@ const AppWrapper = () => {
                 <PeopleList />
               </div>
             </div>
-          } />} />
+          } />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/blogs/:id" element={<IndividualBlog />} />
           <Route path="/add-blogs" element={<ProtectedRoute element={<BlogEntryForm />} />} />
           <Route path="/edit-blogs" element={<ProtectedRoute element={<EditBlogs />} />} />
           <Route path="/delete-blogs" element={<ProtectedRoute element={<DeleteBlogs />} />} />
-          <Route path="/about" element={<ProtectedRoute element={<AboutUs />} />} />
-          <Route path="/blogs/:id" element={<ProtectedRoute element={<IndividualBlog />} />} />
         </Routes>
       </div>
     </div>
