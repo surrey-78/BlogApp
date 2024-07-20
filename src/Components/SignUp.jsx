@@ -1,7 +1,5 @@
-// src/Signup.jsx
-
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from './AuthContext';
 import './Auth.css';
 
@@ -10,11 +8,13 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const { signup } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  const { from } = location.state || { from: { pathname: "/" } };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (signup(email, password)) {
-      navigate('/');
+      navigate(from.pathname);
     } else {
       alert('Signup failed');
     }

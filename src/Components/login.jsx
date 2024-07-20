@@ -1,7 +1,5 @@
-// src/Login.jsx
-
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from './AuthContext';
 import './Auth.css';
 
@@ -10,11 +8,13 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  const { from } = location.state || { from: { pathname: "/" } };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (login(email, password)) {
-      navigate('/');
+      navigate(from.pathname);
     } else {
       alert('Invalid login credentials');
     }

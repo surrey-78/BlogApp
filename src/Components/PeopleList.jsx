@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './PeopleList.css';
 
 const people = [
-    { id: 1, name: 'Author 1', image: '/images/React.png' },
+    { id: 1, name: 'Author 1', image: '/images/react.png' },
     { id: 2, name: 'Author 2', image: '/images/javascript.png' },
     { id: 3, name: 'Author 3', image: '/images/node.png' },
     { id: 4, name: 'Author 4', image: '/images/html.png' },
